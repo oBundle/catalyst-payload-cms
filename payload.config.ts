@@ -30,6 +30,10 @@ export default buildConfig({
       url: process.env.DATABASE_URI || '',
     },
   }),
+  routes: {
+    api: '/cms-api',
+    admin: '/cms-admin',
+  },
   sharp,
   plugins: [
     // storage-adapter-placeholder
