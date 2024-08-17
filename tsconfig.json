@@ -48,6 +48,9 @@
     "paths": {
       "~/*": [
         "./*"
+      ],
+      "@payload-config": [
+        "./payload.config.ts"
       ]
     },
     "tsBuildInfoFile": "node_modules/.cache/tsbuildinfo.json"

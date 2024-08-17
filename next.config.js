@@ -1,3 +1,4 @@
+const { withPayload } = require("@payloadcms/next/withPayload");
 // @ts-check
 const createNextIntlPlugin = require('next-intl/plugin');
 
@@ -58,4 +59,4 @@ const nextConfig = {
   },
 };
 
-module.exports = withNextIntl(nextConfig);
+module.exports = withPayload(withNextIntl(nextConfig));
