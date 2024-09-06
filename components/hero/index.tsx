@@ -1,8 +1,9 @@
 import { Slideshow } from '~/components/ui/slideshow';
+import type { Homepage } from '~/payload-types';
 
 import SlideshowBG from './slideshow-bg-01.jpg';
 
-const slides = [
+const defaultSlides = [
   {
     cta: { label: 'Shop now', href: '/#' },
     description:
@@ -34,4 +35,25 @@ const slides = [
   },
 ];
 
-export const Hero = () => <Slideshow slides={slides} />;
+interface HeroProps {
+  hero: Homepage['hero'];
+}
+
+export const Hero = ({ hero }: HeroProps) => {
+  const slides = hero?.slides || [];
+  const normalizedSlides = slides.map((slide) => ({
+    cta: {
+      label: slide.cta || '',
+      href: slide.ctaLink || '#',
+    },
+    description: slide.description || '',
+    image: {
+      src: defaultSlides[0]?.image?.src || SlideshowBG,
+      alt: defaultSlides[0]?.image?.alt || '',
+      blurDataUrl: defaultSlides[0]?.image?.blurDataUrl || '',
+    },
+    title: slide.title || '',
+  }));
+
+  return <Slideshow slides={normalizedSlides} />;
+};
