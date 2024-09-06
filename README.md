@@ -2,10 +2,39 @@
 
 This is a demo of how to integrate the Payload CMS with the Catalyst framework.
 
-## Getting Started
-- Admin Panel URL: https://localhost:3000/admin
-- Admin Panel Username: admin@test.com
-- Admin Panel Password: test123
+## Quick Start
+In a terminal, clone this repository:
+```shell
+git clone git@github.com:oBundle/catalyst-payload-cms.git
+```
+
+Open the project directory with editor (Visual Studio Code in this case):
+```shell
+code catalyst-payload-cms
+```
+
+Install node dependencies with Node.js v20:
+```shell
+pnpm install
+```
+
+Connect to your BigCommerce Storefront:
+```shell
+pnpm dlx @bigcommerce/create-catalyst@latest init
+```
+
+Start the development server:
+```shell
+pnpm dev
+```
+
+- Storefront URL: https://localhost:3000
+- Payload CMS Admin Panel URL: https://localhost:3000/admin
+- Payload Admin Username: admin@test.com
+- Payload Admin Password: test123
+
+Edit slides for the homepage hero carousel in the Payload CMS Admin Panel by going to [Globals > Homepage](http://localhost:3000/admin/globals/homepage/). The hero slides come from the Payload Local API - no fetch is required!  Check it out: in [app/\[locale\]/(default)/page.tsx](https://github.com/oBundle/catalyst-payload-cms/blob/6af7fc32dcf3f5bcef231f7ff16d5cf61b2942f3/app/%5Blocale%5D/(default)/page.tsx#L65-L73)
+
 
 ![-----------------------------------------------------](https://storage.googleapis.com/bigcommerce-developers/images/catalyst_readme_hr.png)
 
