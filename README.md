@@ -1,3 +1,14 @@
+# Payload CMS Integration Demo
+
+This is a demo of how to integrate the Payload CMS with the Catalyst framework.
+
+## Getting Started
+- Admin Panel URL: https://localhost:3000/admin
+- Admin Panel Username: admin@test.com
+- Admin Panel Password: test123
+
+![-----------------------------------------------------](https://storage.googleapis.com/bigcommerce-developers/images/catalyst_readme_hr.png)
+
 <a href="https://catalyst.dev" target="_blank" rel="noopener norerrer">
   <img src="https://storage.googleapis.com/bigcommerce-developers/images/catalyst_readme_banner.png" alt="Catalyst for Composable Commerce Image Banner" title="Catalyst">
 </a>
