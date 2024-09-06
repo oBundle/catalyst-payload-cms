@@ -1,16 +1,16 @@
 // storage-adapter-import-placeholder
-import { sqliteAdapter } from '@payloadcms/db-sqlite'
-import { lexicalEditor } from '@payloadcms/richtext-lexical'
-import path from 'path'
-import { buildConfig } from 'payload'
-import { fileURLToPath } from 'url'
-import sharp from 'sharp'
+import { sqliteAdapter } from '@payloadcms/db-sqlite';
+import { lexicalEditor } from '@payloadcms/richtext-lexical';
+import path from 'path';
+import { buildConfig } from 'payload';
+import sharp from 'sharp';
+import { fileURLToPath } from 'url';
 
-import { Users } from './collections/Users'
-import { Media } from './collections/Media'
+import { Media } from './collections/Media';
+import { Users } from './collections/Users';
 
-const filename = fileURLToPath(import.meta.url)
-const dirname = path.dirname(filename)
+const filename = fileURLToPath(import.meta.url);
+const dirname = path.dirname(filename);
 
 export default buildConfig({
   admin: {
@@ -32,10 +32,10 @@ export default buildConfig({
   }),
   routes: {
     api: '/cms-api',
-    admin: '/cms-admin',
+    admin: '/admin',
   },
   sharp,
   plugins: [
     // storage-adapter-placeholder
   ],
-})
+});
