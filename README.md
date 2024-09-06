@@ -28,8 +28,8 @@ Start the development server:
 pnpm dev
 ```
 
-- Storefront URL: https://localhost:3000
-- Payload CMS Admin Panel URL: https://localhost:3000/admin
+- Storefront URL: http://localhost:3000
+- Payload CMS Admin Panel URL: http://localhost:3000/admin
 - Payload Admin Username: admin@test.com
 - Payload Admin Password: test123
 
