@@ -5,6 +5,7 @@
   "scripts": {
     "dev": "npm run generate && next dev",
     "generate": "dotenv -e .env.local -- node ./scripts/generate.cjs",
+    "generate:payload-types": "cross-env NODE_OPTIONS=--no-deprecation payload generate:types",
     "build": "npm run generate && next build",
     "start": "next start",
     "lint": "next lint",
